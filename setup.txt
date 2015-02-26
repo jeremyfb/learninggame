@@ -1,0 +1,2 @@
+npm install express jade socket.io
+npm install jshint
