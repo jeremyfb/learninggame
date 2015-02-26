@@ -2,5 +2,8 @@
   "name": "bennett-chat",
   "version": "0.0.1",
   "description": "our first chat app",
-  "dependencies": {}
+  "dependencies": {
+    "jshint": "^2.6.0",
+    "socket.io": "^1.3.4"
+  }
 }
