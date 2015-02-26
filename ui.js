@@ -1,12 +1,13 @@
-var prompt = require("prompt")
+var prompt = require("prompt");
 prompt.start();
 function askForInput(ques){
   prompt.get(['Input'], function (err, result) {
     if (err) { return onErr(err); }
     console.log('Command-line input received:');
-    console.log('You put in: ' + result
-    return result
+    console.log('You put in: ' + result['Input']);
+    return result['Input'];
   });
+}
 
   function onErr(err) {
     console.log(err);
