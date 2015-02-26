@@ -1,2 +1,2 @@
 # learninggame
-Test repository to learn to write a game in JS
+Test repository to learn to write a thing in node.js
