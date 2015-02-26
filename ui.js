@@ -1,5 +1,5 @@
 function messageRecived(string){
-console.log(string);
+	console.log(string);
 return string;
 }
 messageRecived('Hi!');
