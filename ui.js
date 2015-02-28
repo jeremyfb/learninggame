@@ -1,11 +1,18 @@
 var prompt = require("prompt");
 prompt.start();
-function askForInput(ques){
-  prompt.get(['Input'], function (err, result) {
+// send message thing
+function sendMessage(message) {
+  console.log("Message to send: " + message);
+}
+// Function that asks the user for input based on the question that you give it.
+function askToSend(ques){
+  var que = ques || "Input Here"
+  prompt.get([que], function (err, result) {
     if (err) { return onErr(err); }
     console.log('Command-line input received:');
-    console.log('You put in: ' + result['Input']);
-    return result['Input'];
+    console.log('You put in: ' + result[que]);
+    sendMessage(result[que]);
+    return result[que];
   });
 }
 
@@ -21,5 +28,5 @@ function messageRecived(string) {
    console.log(string);
    return string;
 }
-// Call it with 'hi' to test
-messageRecived(askForInput());
+askToSend("What should you say?")
+// console.log(prompt)
