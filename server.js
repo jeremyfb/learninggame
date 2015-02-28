@@ -2,7 +2,6 @@
 // and accept incoming connections. Currently we only support one connection
 // at a time. 
 // It reads from a connected socket and calls the UI function messageReceived
-// The original version was copied from here : http://www.hacksparrow.com/tcp-socket-programming-in-node-js.html
 // I've added comments to explain some of the oddities of JavaScript.
 var net = require('net');
 
