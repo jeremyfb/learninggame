@@ -19,13 +19,13 @@ net.createServer(function(sock){
   // Function that asks the user for input based on the question that you give it.
   prompt.get("What would you like to send?", function (err, result) {
     if (err) {onErr(err);}
-    var que = ("What would you like to send?")
+    console.log(result)
     console.log('Command-line input received:');
-    console.log('You put in: ' + result[que]);
-    sock.write(result[que])
+    console.log('You put in: ' + result["What would you like to send?"]);
+    sock.write(result["What would you like to send?"])
   });
   sock.on('data', function(data) {
-    console.log('DATA ' + sock.remoteAddress + ': ' + data.toString());
+    console.log('Client says: '  + data.toString());
     
     // Call our UI function. Note that if we were make a real server there would
     // be a lot of work here to check the data to make sure it is safe and to
@@ -36,7 +36,7 @@ net.createServer(function(sock){
     //messageReceived(data);
     prompt.get("What would you like to reply with?", function (err, result) {
       if (err) {onErr(err);}
-      var que = ("What would you like reply with?")
+      var que = "What would you like to reply with?"
       console.log('Command-line input received:');
       console.log('You put in: ' + result[que]);
       sock.write(result[que])
@@ -44,7 +44,7 @@ net.createServer(function(sock){
   }); //Note here that we close the } for the anonymous function and the ) for the sock.on call
     
   // Add a 'close' event handler to this instance of socket
-  sock.on('close', function(data) {
+  sock.on('close', function() {
     console.log(' Subscriber closed');
   });
     
