@@ -39,7 +39,7 @@ net.createServer(function(sock) {
     // In code I write I make notes with some prefix to make it easy to find
     // them. like this:
     // XXX-JFB-TODO: The data variable needs to be checked for security
-    messageReceived(data);
+    //messageReceived(data);
         
   }); //Note here that we close the } for the anonymous function and the ) for the sock.on call
     
