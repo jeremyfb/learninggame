@@ -1,4 +1,4 @@
-var HOST = '127.0.0.1';
+var HOST = '192.168.11.157';
 var PORT = 31337;
 var net = require('net'), client = net.connect({port: PORT, host: HOST}), prompt = require('prompt');
 function onErr(err) {
